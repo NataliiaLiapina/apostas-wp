@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Climate+Crisis&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #0D2329;
+    font-family: 'Asap', sans-serif;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 48px;
+    &.container{
+        // padding: 48px 20px 0;
+    }
+}
+.container{
+    padding: 0 20px;
+    max-width: 540px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.menu-burger{
+    width: 36px;
+    height: 36px;
+    padding: 8.5px 4.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #B6F85B;
+    box-sizing: border-box;
+    span{
+        background: #0D2329;
+        width: 100%;
+        height: 3px;
+        transition: 0.1s;
+        &.first.active{
+            rotate: 45deg;
+            transform: translate(5px, 5px);
+        }
+        &.second.active{
+           opacity: 0;
+        }
+        &.third.active{
+            rotate: -45deg;
+            transform: translate(5px, -6.5px);
+        }
+    }
+}
+.main-navigation{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 128px;
+    background: #0D2329;
+    z-index: 100;
+    &.open{
+        display: block;
+    }
+    ul.menu{
+        // padding: 38px 20px 0;
+    }
+    li.menu-item{
+        padding: 21px 0;
+        list-style: none;
+        text-align: center;
+        a{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 0 24px;
+            border-left: 1px solid #B6F85B;
+            border-right: 1px solid #B6F85B;
+            @media only screen and (min-width: 330px){
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.screen1{
+    padding-top: 47px;
+    .title{
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+        h1{
+            font-family: 'Climate Crisis', cursive;
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 100%;
+            text-transform: uppercase;
+            color: #B6F85B;
+            @media only screen and (min-width: 350px){
+                font-size: 44px;
+            }
+            p{
+                font-size: 26px;
+                text-align: right;
+                margin-top: 5px;
+                @media only screen and (min-width: 350px){
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    .subtitle{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        color: #FFFFFF;
+        max-width: 200px;
+        margin-top: 12px;
+    }
+    .screen1-content{
+        margin-top: 42px;
+        display: flex;
+        justify-content: space-between;
+        // max-width: 320px;
+        // width: 100%;
+        // margin: 0 auto;
+        .text1{
+            p{
+                font-weight: 300;
+                font-size: 10px;
+                line-height: 11px;
+                color: #FFFFFF;
+                padding-left: 8px;
+                border-left: 2px solid #B6F85B;
+            }
+        }
+        .text2{
+            font-weight: 300;
+            font-size: 10px;
+            line-height: 11px;
+            color: #FFFFFF;
+            text-align: right;
+            max-width: 190px;
+        }
+    }
+    .arrow-down{
+        margin-top: 24px;
+        text-align: center;
+    }
+}
+.screen2{
+    padding-top: 44px;
+    padding-bottom: 32px;
+    .block{
+        background: #FFFFFF;
+        border: 2px solid #B6F85B;
+        padding: 16px 12px;
+        margin-bottom: 12px;
+        position: relative;
+        transition: 0.3s;
+        &::before{
+            content: '';
+            position: absolute;
+            top: -4px;
+            bottom: -4px;
+            left: -4px;
+            right: -4px;
+            background: #B6F85B;
+            z-index: -1;
+            visibility: hidden;
+        }
+        &:hover{
+            padding: 23px 12px;
+        }
+        &:hover::before{
+            visibility: visible;
+            transition: 0.3s;
+        }
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #0D2329;
+            margin-bottom: 12px;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+            .left{
+                width: 50%;
+            }
+            .logo{
+                display: flex;
+                img{
+                    width: 22px;
+                    height: 16px;
+                }
+                h2{
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 18px;
+                    letter-spacing: 0.16em;
+                    text-transform: uppercase;
+                    margin-left: 4px;
+                }
+            }
+            .bonus{
+                width: 40%;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 150%;
+                text-transform: uppercase;
+                text-align: center;
+                span{
+                    font-weight: 600;
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 11px;
+                    color: #A2A2A2;
+                    text-transform: capitalize;
+                    margin-top: 2px;
+                }
+            }
+            .text{
+                font-weight: 300;
+                font-size: 10px;
+                line-height: 11px;
+                text-transform: lowercase;
+                text-align: center;
+            }
+            .button{
+                background: #B6F85B;
+                padding: 11px;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 14px;
+                text-transform: uppercase;
+                color: #0D2329;
+                text-decoration: none;
+                border: 2px solid #B6F85B;
+                box-sizing: border-box;
+                transition: 0.3s;
+                &:hover,
+                &:focus{
+                    background: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+.screen3{
+    padding: 32px 0;
+    .screen3-content{
+        min-height: 170px;
+        padding-top: 32px;
+    }
+    .text-block{
+        background: #FFFFFF;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        color: #0D2329;
+        width: 260px;
+        box-sizing: border-box;
+        &.text-block-left{
+            padding: 4.5px 12px;
+        }
+        &.text-block-center{
+            padding: 4px 12px;
+            margin: 16px auto 0;
+        }
+        &.text-block-right{
+            padding: 14px 12px;
+            margin: 16px 0 0 auto;
+        }
+    }
+}
+.screen4{
+    padding: 32px 0 24px;
+    img{
+        display: block;
+        width: 100%;
+    }
+    h2{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin: 24px auto 12px;
+    }
+    p{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 150%;
+        color: #FFFFFF;
+    }
+}
+.screen5{
+    padding: 24px 0 32px;
+    .title{
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto 24px;
+        p{
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            text-transform: uppercase;
+            color: #B6F85B;
+            font-family: "Climate Crisis", cursive;
+            &:first-of-type{
+                text-align: left;
+                margin-bottom: 4px;
+            }
+            &:last-of-type{
+                text-align: right;
+            }
+        }
+    }
+    .content_screen5 p{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 150%;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+    .image_screen5{
+        margin: 48px 0 21px;
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+}
+.screen6{
+    padding: 32px 0 100px;
+    h2{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 24px;
+    }
+    .content_screen6 p{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 150%;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+        position: relative;
+        padding-left: 29.7px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 27px;
+            left: 9px;
+            // transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: #B6F85B;
+        }
+    }
+}
+.logos{
+    background: #081518;
+    padding: 24px 0 16px;
+    img{
+        display: block;
+        margin: 0 auto 42px;
+        &:last-of-type{
+            margin: 0 auto;
+        }
+    }
+}
+footer{
+    padding: 24px 0;
+    .footer_content{
+        border-top: 1px solid #B6F85B;
+        border-bottom: 1px solid #B6F85B;
+        padding: 12px 0;
+        p{
+            font-weight: 300;
+            font-size: 10px;
+            line-height: 11px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+    .footer_bottom{
+        font-weight: 300;
+        font-size: 8px;
+        line-height: 9px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 2px;
+    }
+}
